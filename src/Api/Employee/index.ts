@@ -1,10 +1,9 @@
 import { gql } from "@apollo/client";
 import client from "../base";
-import { wrapper } from "../../Store";
-import { setEmployees } from "../../Store/EmployesSlice";
-
+import { IEmplyeesQRequest } from "./index.d";
+export type * from './index.d'
 export const getEmployees = () => {
-  return client.query({
+  return client.query<IEmplyeesQRequest>({
     query: gql`
       query getEmployees {
         employees {
@@ -12,24 +11,12 @@ export const getEmployees = () => {
           fullname
           department
           avatar
+          vote
         }
       }
     `,
   });
 };
 
-export const getServerSideProps = wrapper.getServerSideProps(
-  (store) =>
-    async ({ params }) => {
-      console.log(params, "params");
-      // we can set the initial state from here
-      // we are setting to false but you can run your custom logic here
-      await store.dispatch(setEmployees(params));
-      console.log("State on server", store.getState());
-      return {
-        props: {
-          authState: false,
-        },
-      };
-    }
-);
+
+// getEmployeeDetail

@@ -1,7 +1,10 @@
-export interface EmployeeData {
+export interface IEmployee {
   id: string;
   fullname: string;
   department: string;
   avatar: string;
-  // Diğer çalışan özellikleri...
+  vote: number;
+}
+export interface IEmplyeesQRequest {
+  employees: IEmployee[];
 }

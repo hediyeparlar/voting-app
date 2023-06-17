@@ -1,11 +1,11 @@
 import { configureStore, ThunkAction, Action } from "@reduxjs/toolkit";
-import employeesSlice from "./EmployesSlice";
 import { createWrapper } from "next-redux-wrapper";
+import { EmployeesSlice } from "./EmployeesSlice";
 
 const makeStore = () =>
   configureStore({
     reducer: {
-      employeesSlice: employeesSlice,
+      [EmployeesSlice.name]: EmployeesSlice.reducer,
     },
     devTools: true,
   });
