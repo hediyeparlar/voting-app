@@ -6,15 +6,22 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "mock:api": "graphql-faker"
   },
   "dependencies": {
+    "@apollo/client": "^3.7.15",
+    "@reduxjs/toolkit": "^1.9.5",
     "@types/react-dom": "18.2.5",
     "eslint": "8.42.0",
     "eslint-config-next": "13.4.6",
+    "graphql": "^16.6.0",
+    "graphql-faker": "^2.0.0-rc.25",
     "next": "13.4.6",
+    "next-redux-wrapper": "^8.1.0",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "react-redux": "^8.1.0"
   },
   "devDependencies": {
     "@types/node": "^20.3.1",
