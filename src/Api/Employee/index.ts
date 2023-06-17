@@ -1,7 +1,8 @@
 import { gql } from "@apollo/client";
 import client from "../base";
 import { IEmplyeesQRequest } from "./index.d";
-export type * from './index.d'
+export * from "./index.d";
+
 export const getEmployees = () => {
   return client.query<IEmplyeesQRequest>({
     query: gql`
@@ -12,11 +13,11 @@ export const getEmployees = () => {
           department
           avatar
           vote
+          age
         }
       }
     `,
   });
 };
-
 
 // getEmployeeDetail

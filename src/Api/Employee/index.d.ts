@@ -4,6 +4,7 @@ export interface IEmployee {
   department: string;
   avatar: string;
   vote: number;
+  age: number;
 }
 export interface IEmplyeesQRequest {
   employees: IEmployee[];

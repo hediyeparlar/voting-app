@@ -1,0 +1,16 @@
+@font-face {
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  src: url("/fonts/Poppins-Regular.ttf") format("truetype"),
+    url("/fonts/Poppins-SemiBold.ttf") format("truetype"),
+    url("/fonts/Poppins-ExtraBold.ttf") format("truetype"),
+    url("/fonts/Poppins-Regular.svg#Poppins") format("svg");
+}
+body {
+  font-family: "Poppins", sans-serif;
+  transition-duration: 0.3s;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #242c41;
+}

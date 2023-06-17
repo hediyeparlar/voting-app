@@ -15,6 +15,8 @@ const EmployeeList = (props: Props) => {
       fullname={employee.fullname}
       vote={employee.vote}
       id={employee.id}
+      department={employee.department}
+      age={employee.age}
     />
   ));
 };
