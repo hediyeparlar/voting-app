@@ -11,10 +11,10 @@ const EmployeesStyle = styled.div`
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 10px;
 
-  @media screen and (max-width: 1023px) {
+  @media screen and (max-width: 1052px) {
     grid-template-columns: repeat(1, 1fr);
   }
-  @media screen and (min-width: 1024px) and (max-width: 1365px) {
+  @media screen and (min-width: 1053px) and (max-width: 1660px) {
     grid-template-columns: repeat(2, 1fr);
   }
 `;

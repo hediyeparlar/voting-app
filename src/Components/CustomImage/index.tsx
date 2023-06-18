@@ -7,7 +7,7 @@ interface ImageProps {
 
 const StyledImage = styled.img`
   border-radius: 8px;
-  max-height: 19vh;
+  height: auto;
 `;
 
 const CustomImage = ({ src, alt }: ImageProps) => {
