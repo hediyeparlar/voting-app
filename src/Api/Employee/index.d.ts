@@ -22,6 +22,7 @@ export interface IEmployeeDetail {
   email: string;
   telephone: string;
   birthday: string;
+  city: string;
 }
 export interface IEmployeeDetailQRequest {
   employee: IEmployeeDetail;

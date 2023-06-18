@@ -6,10 +6,12 @@ interface Props {
   Bordered?: boolean | undefined;
   onClick?: () => void;
   profileCard?: boolean;
+  noClickable?: boolean;
 }
 
 const StyledCard = styled.div<{
   profileCard?: boolean;
+  noClickable?: boolean;
 }>`
   display: table-cell;
   width: 30%;
@@ -30,14 +32,19 @@ const StyledCard = styled.div<{
       display: block;
       max-height: max-content;
     `}
+  ${({ noClickable }) =>
+    noClickable &&
+    css`
+      &:hover {
+        cursor: auto;
+        box-shadow: rgba(0, 0, 0, 0.14) 0px 7px 24px 6px;
+        background-color: ;
+      }
+    `}
 `;
 
 function Card({ children, ...CardProps }: Props): ReactElement {
-  return (
-    <StyledCard {...CardProps} profileCard={CardProps.profileCard}>
-      {children}
-    </StyledCard>
-  );
+  return <StyledCard {...CardProps}>{children}</StyledCard>;
 }
 
 export default Card;

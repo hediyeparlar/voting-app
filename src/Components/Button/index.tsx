@@ -17,9 +17,8 @@ const StyledButton = styled.button<ButtonProps>`
   transition: background-color 0.3s ease;
   display: flex;
   margin: auto;
-  margin-top:10px;
-  margin-bottom:10px;
-
+  margin-top: 10px;
+  margin-bottom: 10px;
   &:hover {
     background-color: rgb(45, 166, 77);
     border-color: rgb(45, 196, 77);

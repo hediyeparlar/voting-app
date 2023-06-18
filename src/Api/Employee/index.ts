@@ -31,6 +31,12 @@ export const getEmployeeDetail = (id: string) => {
           avatar
           vote
           age
+          telephone
+          age
+          address
+          birthday
+          email
+          city
         }
       }
     `,

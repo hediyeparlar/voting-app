@@ -46,17 +46,21 @@ const StyledCardLabel = styled.div<{
 
   & > p {
     text-align: end;
+    color: #53605e87;
+    font-weight: 600;
     margin: initial;
     ${({ buttonContent }) =>
       buttonContent &&
       css`
         margin-left: 10px;
+        color: #ffff;
+        font-weight: 500;
       `}
     ${({ boldGreenLabel }) =>
       boldGreenLabel &&
       css`
         font-weight: bolder;
-        color: #2dc44d;
+        color: #25ad43;
       `}
   }
 `;
