@@ -7,7 +7,7 @@ export const getEmployeesAction = createAsyncThunk("Employees", async () => {
 });
 
 export const getEmployeeDetailAction = createAsyncThunk(
-  "Employee",
+  "EmployeeDetail",
   async (id: string) => {
     const response = await getEmployeeDetail(id);
     return response.data;

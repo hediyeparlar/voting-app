@@ -18,8 +18,19 @@ type Employee {
   avatar: String @fake(type: avatarUrl)
   vote: Int @fake(type: number, options:{minNumber: 0, maxNumber: 10})
 }
+type EmployeeDetail {
+  id: ID
+  fullname: String @fake(type: fullName, locale: tr)
+  department: String @examples(values: ["Yazilim Ekibi", "Satis Ekibi", "Pazarlama Ekibi","Müşteri Ekibi"])
+  avatar: String @fake(type: imageUrl)
+  age:Int @fake (type:number options:{minNumber: 18, maxNumber: 45})
+  vote: Int @fake(type: number, options:{minNumber: 0, maxNumber: 10})
+  address: String @fake (type:streetAddress, locale:tr),
+  email:String @fake (type:email)
+  telephone: String @fake(type: phoneNumber ,locale:tr)
+  birthday: String @fake(type: date, options: { dateFormat: "DD-MM-YYYY" })}
 
 type Query {
-  employee(id: ID): Employee
+  employee(id: ID): EmployeeDetail
   employees:[Employee!]  @listLength(min: 10, max: 20)
 }

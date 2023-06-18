@@ -1,11 +1,11 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { HYDRATE } from "next-redux-wrapper";
 import { AppState } from ".";
-import { IEmployee } from "../Api/Employee";
+import { IEmployee, IEmployeeDetail } from "../Api/Employee";
 import { getEmployeeDetailAction, getEmployeesAction } from "./EmployeesAction";
 export interface EmployeesState {
   data: IEmployee[];
-  detailData: IEmployee | null;
+  detailData: IEmployeeDetail | null;
 }
 
 const initialState: EmployeesState = {
@@ -48,6 +48,7 @@ export const EmployeesSlice = createSlice({
       });
   },
 });
+
 export const { voteEmployee } = EmployeesSlice.actions;
 
 export const selectEmployeeState = (state: AppState) => state.Employees.data;
