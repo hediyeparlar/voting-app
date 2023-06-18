@@ -13,9 +13,7 @@ interface EmployeeCardProps
   > {}
 
 const EmployeeCardStyle = styled.div`
-  padding: 10px;
-  /* width: 50%; */
-  display: flex;
+  padding: 20px;
 `;
 
 const CardContentStyle = styled.div`
@@ -31,10 +29,22 @@ const EmployeeCard: FC<EmployeeCardProps> = (props) => {
       <Card>
         <CustomImage src={props.avatar} alt={props.fullname} />
         <CardContentStyle>
-          <p onClick={() => dispatch(voteEmployee(props.id))}>{props.vote}</p>
-          <p>{props.fullname}</p>
-          <p>{props.age}</p>
-          <p> {props.department}</p>
+          <div>
+            <i className="icon voteChart" />
+            <p onClick={() => dispatch(voteEmployee(props.id))}>{props.vote}</p>
+          </div>
+          <div>
+            <i className="icon user" />
+            <p>{props.fullname}</p>
+          </div>
+          <div>
+            <i className="icon age" />
+            <p>{props.age}</p>
+          </div>
+          <div>
+            <i className="icon department" />
+            <p>{props.department}</p>
+          </div>
         </CardContentStyle>
       </Card>
     </EmployeeCardStyle>

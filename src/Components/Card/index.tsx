@@ -7,8 +7,9 @@ interface Props {
 }
 
 const StyledCard = styled.div`
-  width: 40%;
-  max-height: 19vh;
+  width: 70%;
+  /* max-height: 19vh; */
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 10px 2px;
   display: flex;
   border: 1.8px solid rgb(45, 196, 77);
   border-radius: 8px;
@@ -16,7 +17,7 @@ const StyledCard = styled.div`
   margin: auto;
   &:hover {
     cursor: pointer;
-    box-shadow: rgba(0, 0, 0, 0.12) 0px 5px 22px 4px;
+    box-shadow: rgba(0, 0, 0, 0.14) 0px 7px 24px 6px;
     background-color: ;
   }
 `;

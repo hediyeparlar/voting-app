@@ -14,3 +14,37 @@ body {
   -moz-osx-font-smoothing: grayscale;
   color: #242c41;
 }
+
+.icon {
+  background-repeat: no-repeat;
+  display: inline-block;
+}
+.icon.user {
+  background-image: url("../icons/user.svg");
+  width: 34px;
+  height: 34px;
+}
+
+.icon.age {
+  background-image: url("../icons/age.svg");
+  width: 28px;
+  height: 28px;
+}
+
+.icon.department {
+  background-image: url("../icons/department.svg");
+  width: 30px;
+  height: 30px;
+}
+
+.icon.voteChart {
+  background-image: url("../icons/vote_chart.svg");
+  width: 30px;
+  height: 30px;
+}
+
+.icon.vote {
+  background-image: url("../icons/vote.svg");
+  width: 30px;
+  height: 30px;
+}

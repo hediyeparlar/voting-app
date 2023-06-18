@@ -21,5 +21,5 @@ type Employee {
 
 type Query {
   employee(id: ID): Employee
-  employees:[Employee!]  @listLength(min: 10, max: 15)
+  employees:[Employee!]  @listLength(min: 10, max: 20)
 }
