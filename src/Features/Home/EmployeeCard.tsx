@@ -11,10 +11,14 @@ interface EmployeeCardProps
   extends Pick<
     IEmployee,
     "avatar" | "fullname" | "vote" | "id" | "department" | "age"
-  > {}
+  > {
+  cardDetailOnClick: (id: string) => void;
+}
 
 const EmployeeCardStyle = styled.div`
   padding: 20px;
+  margin: auto;
+  width: 75%;
 `;
 
 const CardContentStyle = styled.div`
@@ -22,7 +26,6 @@ const CardContentStyle = styled.div`
   font-size: 18px;
   font-weight: 500;
   margin: auto;
-  padding: 4px;
 `;
 
 const EmployeeCard: FC<EmployeeCardProps> = (props) => {
@@ -40,21 +43,27 @@ const EmployeeCard: FC<EmployeeCardProps> = (props) => {
   return (
     <EmployeeCardStyle>
       <Card>
-        <CustomImage src={props.avatar} alt={props.fullname} />
-        <CardContentStyle>
-          <CardLabel icon="user" text={props.fullname} />
-          <CardLabel icon="age" text={props.age + " Yaş "} />
-          <CardLabel icon="department" text={props.department} />
-          <CardLabel icon="voteChart" text={props.vote + " Oy "} />
-          <Button onClick={() => voteEmployeeIncrease(props.id)} key={props.id}>
+        <div onClick={() => props.cardDetailOnClick(props.id)}>
+          <CustomImage src={props.avatar} alt={props.fullname} />
+          <CardContentStyle>
+            <CardLabel icon="user" text={props.fullname} />
+            <CardLabel icon="age" text={props.age + " Yaş "} />
+            <CardLabel icon="department" text={props.department} />
             <CardLabel
-              icon="vote"
-              text={"Oy Ver"}
-              moveAnimation={moveAnimationIcon}
-              buttonContent
+              icon="voteChart"
+              text={props.vote + " Oy "}
+              boldGreenLabel
             />
-          </Button>
-        </CardContentStyle>
+          </CardContentStyle>
+        </div>
+        <Button onClick={() => voteEmployeeIncrease(props.id)} key={props.id}>
+          <CardLabel
+            icon="vote"
+            text={"Oy Ver"}
+            moveAnimation={moveAnimationIcon}
+            buttonContent
+          />
+        </Button>
       </Card>
     </EmployeeCardStyle>
   );

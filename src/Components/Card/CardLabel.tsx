@@ -6,6 +6,7 @@ type CardLabelProps = {
   icon?: string;
   moveAnimation?: boolean;
   buttonContent?: boolean;
+  boldGreenLabel?: boolean;
 };
 
 const moveAnimationIcon = keyframes`
@@ -23,11 +24,17 @@ const moveAnimationIcon = keyframes`
 const StyledCardLabel = styled.div<{
   moveAnimation?: boolean;
   buttonContent?: boolean;
+  boldGreenLabel?: boolean;
 }>`
   display: flex;
   align-items: center;
-  margin: 0px 3px;
+  margin: 9px;
   justify-content: space-between;
+  ${({ buttonContent }) =>
+    buttonContent &&
+    css`
+      margin: 6px;
+    `}
   .icon {
     ${({ moveAnimation }) =>
       moveAnimation &&
@@ -37,12 +44,18 @@ const StyledCardLabel = styled.div<{
   }
 
   & > p {
-    text-align: center;
-    margin: auto;
+    text-align: end;
+    margin: initial;
     ${({ buttonContent }) =>
       buttonContent &&
       css`
         margin-left: 10px;
+      `}
+    ${({ boldGreenLabel }) =>
+      boldGreenLabel &&
+      css`
+        font-weight: bolder;
+        color: #2dc44d;
       `}
   }
 `;
@@ -52,6 +65,7 @@ const CardLabel = (props: CardLabelProps) => {
     <StyledCardLabel
       moveAnimation={props.moveAnimation}
       buttonContent={props.buttonContent}
+      boldGreenLabel={props.boldGreenLabel}
     >
       {props.icon && <i className={`icon ${props.icon}`} />}
       <p>{props.text}</p>

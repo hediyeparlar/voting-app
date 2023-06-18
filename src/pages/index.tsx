@@ -10,7 +10,7 @@ export default Index;
 
 export const getServerSideProps = wrapper.getServerSideProps(
   (store) =>
-    async ({ params }) => {
+    async ({}) => {
       await store.dispatch(getEmployeesAction());
       return {
         props: {},

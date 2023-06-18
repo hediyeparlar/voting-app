@@ -17,7 +17,6 @@ const StyledButton = styled.button<ButtonProps>`
   transition: background-color 0.3s ease;
   display: flex;
   margin: auto;
-  padding:4px;
   margin-top:10px;
   margin-bottom:10px;
 

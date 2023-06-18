@@ -6,12 +6,14 @@ interface ImageProps {
 }
 
 const StyledImage = styled.img`
-  border-radius: 8px;
+  border-radius: 8.2px;
   height: auto;
+  margin: auto;
+  display: flex;
 `;
 
 const CustomImage = ({ src, alt }: ImageProps) => {
-  return <StyledImage src={src} alt={alt} width={240} height={200} />;
+  return <StyledImage src={src} alt={alt} width={275} height={200} />;
 };
 
 export default CustomImage;

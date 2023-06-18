@@ -9,3 +9,7 @@ export interface IEmployee {
 export interface IEmplyeesQRequest {
   employees: IEmployee[];
 }
+
+export interface IEmplyeeDetailQRequest {
+  employee: IEmployee;
+}

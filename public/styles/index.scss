@@ -12,7 +12,7 @@ body {
   transition-duration: 0.3s;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: #242c41;
+  background: #a5dc861c;
 }
 
 .icon {
@@ -21,26 +21,26 @@ body {
 }
 .icon.user {
   background-image: url("../icons/user.svg");
-  width: 34px;
-  height: 34px;
+  width: 30px;
+  height: 30px;
 }
 
 .icon.age {
   background-image: url("../icons/age.svg");
-  width: 28px;
-  height: 28px;
+  width: 25px;
+  height: 25px;
 }
 
 .icon.department {
   background-image: url("../icons/department.svg");
-  width: 30px;
-  height: 30px;
+  width: 25px;
+  height: 25px;
 }
 
 .icon.voteChart {
   background-image: url("../icons/vote_chart.svg");
-  width: 30px;
-  height: 30px;
+  width: 25px;
+  height: 25px;
 }
 
 .icon.vote {
