@@ -7,6 +7,7 @@ type CardLabelProps = {
   moveAnimation?: boolean;
   buttonContent?: boolean;
   boldGreenLabel?: boolean;
+  textTitle?: string;
 };
 
 const moveAnimationIcon = keyframes`
@@ -67,6 +68,7 @@ const CardLabel = (props: CardLabelProps) => {
       buttonContent={props.buttonContent}
       boldGreenLabel={props.boldGreenLabel}
     >
+      {props.textTitle && <p>{props.textTitle + " : "}</p>}
       {props.icon && <i className={`icon ${props.icon}`} />}
       <p>{props.text}</p>
     </StyledCardLabel>
